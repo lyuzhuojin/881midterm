@@ -1,0 +1,2 @@
+# 881midterm
+gamma distribution
