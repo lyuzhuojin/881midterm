@@ -105,6 +105,32 @@ ks.test(a,rp)
 
 
 
+
+
+
+# ***************** Comments from yulan *****************:
+# When I run it, the p-value of ks test is less than 0.8.
+# Do you think it's ok to change lambda to mean(a) instead of 4?
+rp <- rpois(1000, mean(a))
+ks.test(a,rp)
+
+
+
+
+
+
+# ***************** Comments from yulan ******************:
+# Maybe here we can also draw the real density of poisson distribution and compare it with density of a?
+# It's a rough way to check distribution.
+scale <- length(a)
+x <- seq(min(a),max(a),1)
+y <- dpois(x,4)*scale
+qplot(a, binwidth = 1) + geom_line(aes(x,y,color='red'))
+
+
+
+
+
 #2.The following three functions tell us the relationship between gamma and exponential distribution
 
 #--------------------------------------------------------------------------------------------------------
